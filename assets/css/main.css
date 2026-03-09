@@ -1,43 +1,65 @@
-
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Global Colors - White & Blue Creative Theme */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --background-color: #ffffff;
+  --default-color: #4a4a4a;
+  --heading-color: #0d1b2a;
+  --accent-color: #0077b6;
+  /* Deep Ocean Blue */
+  --secondary-color: #00b4d8;
+  /* Bright Sky Blue */
+  --surface-color: #f8fbff;
+  --contrast-color: #ffffff;
+  --nav-color: #1b263b;
+  --nav-hover-color: #0077b6;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Glassmorphism & Modern Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
 
+.blue-gradient-text {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: #fff !important;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 119, 182, 0.3);
+}
+
+/* Color Presets */
 .light-background {
-  --background-color: #f4fafd;
-  --surface-color: #ffffff;
+  --background-color: #ffffff;
+  --surface-color: #f0f7ff;
 }
 
 .dark-background {
-  --background-color: #040b14;
-  --default-color: #ffffff;
+  --background-color: #0d1b2a;
+  --default-color: #e0e1dd;
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
+  --surface-color: #1b263b;
   --contrast-color: #ffffff;
 }
 
@@ -129,50 +151,46 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+# Global Top Header (VC Style)
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  padding: 0 15px;
-  width: 300px;
-  transition: all ease-in-out 0.3s;
-  overflow-y: auto;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
   z-index: 997;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all ease-in-out 0.3s;
 }
 
-.header .profile-img img {
-  margin: 15px auto;
-  display: block;
-  width: 130px;
-  height: 170px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+.header .profile-img {
+  display: none;
 }
 
 .header .logo {
   line-height: 1;
-  margin-bottom: 15px;
-}
-
-.header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--heading-color);
 }
 
 .header .social-links {
-  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
 }
 
 .header .social-links a {
@@ -180,33 +198,21 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
-  margin: 0 2px;
-  border-radius: 50%;
-  text-align: center;
-  width: 40px;
-  height: 40px;
+  color: var(--nav-color);
+  margin: 0 8px;
   transition: 0.3s;
 }
 
 .header .social-links a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--heading-color);
 }
 
-@media (min-width: 1200px) {
-
-  .header~main,
-  .header~#footer {
-    margin-left: 300px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .header {
-    left: -100%;
-  }
+/* Reset main and footer margins */
+main,
+#footer {
+  margin-left: 0 !important;
+  margin-top: 80px;
+  /* Offset for fixed top header */
 }
 
 .header.header-show {
@@ -249,29 +255,32 @@ h6 {
 }
 
 .navmenu ul {
+  display: flex;
   list-style: none;
-  padding: 0 0 20px 0;
+  padding: 0;
   margin: 0;
+  align-items: center;
 }
 
 .navmenu a,
 .navmenu a:focus {
   color: var(--nav-color);
-  padding: 15px 10px;
+  padding: 0 15px;
   font-family: var(--nav-font);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   white-space: nowrap;
   transition: 0.3s;
-  width: 100%;
 }
 
 .navmenu a .navicon,
 .navmenu a:focus .navicon {
-  font-size: 20px;
-  margin-right: 10px;
+  display: none;
+  /* Hide icons in top nav */
 }
 
 .navmenu a .toggle-dropdown,
@@ -383,6 +392,11 @@ h6 {
   overflow: hidden;
   background: var(--background-color);
   transition: all 0.6s ease-out;
+}
+
+#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
 }
 
 #preloader:before {
@@ -552,13 +566,6 @@ section,
   z-index: 1;
 }
 
-.hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
 
 .hero .container {
   position: relative;
@@ -637,6 +644,128 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+
+/*--------------------------------------------------------------
+# Custom VC Design Classes
+--------------------------------------------------------------*/
+.vc-hero {
+  background-color: #000;
+  padding-top: 120px;
+}
+
+.vc-headline {
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.vc-hero-desc {
+  max-width: 750px;
+  line-height: 1.8;
+}
+
+.vc-thesis-quote {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.vc-text-block {
+  max-width: 800px;
+}
+
+.vc-paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.vc-meta-text {
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* VC Utility Classes for replacing inline styles */
+.vc-bg-dark {
+  background-color: #050505;
+}
+
+.vc-bg-darker {
+  background-color: #0a0a0a;
+}
+
+.vc-badge-bg {
+  background-color: #111;
+}
+
+.vc-border-dark {
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+
+.vc-border-1 {
+  border-width: 1px !important;
+}
+
+.vc-border-bottom-dark {
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.vc-font-sm {
+  font-size: 0.85rem;
+}
+
+.vc-font-md {
+  font-size: 0.95rem;
+}
+
+.vc-font-lg {
+  font-size: 1rem;
+}
+
+.vc-font-xl {
+  font-size: 1.1rem;
+}
+
+.vc-font-xxl {
+  font-size: 1.2rem;
+}
+
+.vc-font-xxxl {
+  font-size: 1.5rem;
+}
+
+.vc-letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+.vc-letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.vc-line-height-lg {
+  line-height: 1.8;
+}
+
+.vc-max-w-600 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vc-max-w-800 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vc-font-weight-500 {
+  font-weight: 500;
+}
+
+.vc-quote-text {
+  font-style: italic;
+  line-height: 1.6;
+}
+
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1258,8 +1387,109 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Timeline Box (Resume)
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+.timeline-box {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline-box .p-4 {
+  position: relative;
+}
+
+.timeline-box .p-4::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--background-color);
+  border: 3px solid;
+  z-index: 10;
+}
+
+.timeline-box .border-primary::before {
+  border-color: var(--accent-color);
+}
+
+.timeline-box .border-dark::before {
+  border-color: var(--heading-color);
+}
+
+/*--------------------------------------------------------------
+# Responsive Typography & Layouts (White & Blue Theme)
+--------------------------------------------------------------*/
+h1.display-3 {
+  font-size: 3.5rem;
+  /* Réduit depuis la taille par défaut Bootstrap (~4.5rem) */
+}
+
+h2.display-5 {
+  font-size: 2.25rem;
+  /* Réduit depuis ~3rem */
+}
+
+h2.display-6 {
+  font-size: 1.75rem;
+  /* Légèrement réduit pour être moins imposant */
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  h1.display-3 {
+    font-size: 2.5rem;
+  }
+
+  h2.display-5 {
+    font-size: 1.75rem;
+  }
+
+  h2.display-6 {
+    font-size: 1.5rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Basic Dark Mode Theme
+--------------------------------------------------------------*/
+body.dark-theme {
+  --background-color: #050505;
+  --default-color: rgba(255, 255, 255, 0.7);
+  --heading-color: #ffffff;
+  --surface-color: #0f1012;
+  --nav-color: rgba(255, 255, 255, 0.9);
+  --nav-hover-color: var(--accent-color);
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+body.dark-theme .bg-light {
+  background-color: #0f1012 !important;
+}
+
+body.dark-theme .bg-white,
+body.dark-theme .card,
+body.dark-theme .service-box,
+body.dark-theme .glass-card,
+body.dark-theme .header {
+  background-color: #050505 !important;
+  border-color: #222 !important;
+}
+
+body.dark-theme .text-dark {
+  color: #ffffff !important;
+}
+
+body.dark-theme .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+body.dark-theme .border-light {
+  border-color: #333 !important;
 }
