@@ -119,9 +119,9 @@
             class="text-primary">VENTURE</span></h1>
       </a>
 
-      <nav id="navmenu" class="navmenu d-none">
+      <nav id="navmenu" class="navmenu ">
         <ul>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#about">À propos</a></li>
           <li><a href="portfolio.html" class="active" data-i18n="nav_portfolio">Entreprises</a></li>
           <li><a href="books.html" data-i18n="nav_books">Publications</a></li>
           <li><a href="resume.html" data-i18n="nav_resume">Parcours</a></li>
@@ -130,7 +130,7 @@
       </nav>
 
       <div class="header-social-links d-none d-md-flex align-items-center gap-3">
-        <a href="index.html#contact" class="btn btn-premium px-4 rounded-pill small fw-bold text-nowrap"
+        <a href="contact.html" class="btn btn-premium px-4 rounded-pill small fw-bold text-nowrap"
           data-i18n="nav_connect">Let's Connect</a>
       </div>
     </div>
@@ -141,14 +141,52 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section py-5 mt-5">
       <div class="container section-title text-center mb-5" data-aos="fade-up">
-        <h2 class="display-6 fw-bold">Mes Entreprises</h2>
-        <p>Startups et projets stratégiques que j'ai co-fondés ou propulsés.</p>
+        <h2 class="display-6 fw-bold" data-i18n="portfolio_title">Nos Entreprises</h2>
+        <p data-i18n="portfolio_subtitle">Startups et ventures stratégiques co-fondées et propulsées dans les secteurs les plus prometteurs de l'Afrique.</p>
       </div>
 
       <div class="container">
         <div class="row gy-4">
-          <!-- Fluxy -->
+          <!-- United Student Developers -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card card-project h-100 shadow-sm border-light">
+              <div class="p-4 bg-light text-center border-bottom border-light"
+                style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <div class="text-primary fs-1"><i class="bi bi-people"></i></div>
+              </div>
+              <div class="card-body p-4">
+                <h4 class="fw-bold text-dark" data-i18n="portfolio_usd_name">UNITED STUDENT DEVELOPERS</h4>
+                <p class="text-primary small fw-bold mb-3 ls-1" data-i18n="portfolio_usd_sector">EDTECH / COMMUNITY</p>
+                <p class="text-muted small" data-i18n="portfolio_usd_desc">Communauté technologique internationale qui forme, soutient et connecte de jeunes professionnels du digital — gratuitement. Présent dans plusieurs pays africains.</p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <span class="badge bg-light text-dark px-3 py-2 rounded-pill border" data-i18n="portfolio_usd_role">Fondateur</span>
+                  <a href="#" target="_blank" class="text-primary fw-bold small" data-i18n="portfolio_usd_website">Rejoindre USD's <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wa Xle Ahi -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card card-project h-100 shadow-sm border-light">
+              <div class="p-4 bg-light text-center border-bottom border-light"
+                style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <div class="text-primary fs-1"><i class="bi bi-shop"></i></div>
+              </div>
+              <div class="card-body p-4">
+                <h4 class="fw-bold text-dark" data-i18n="portfolio_waxle_name">WA XLE AHI</h4>
+                <p class="text-primary small fw-bold mb-3 ls-1" data-i18n="portfolio_waxle_sector">SERVICES / PLATFORM</p>
+                <p class="text-muted small" data-i18n="portfolio_waxle_desc">Plateforme digitale complète connectant les clients aux prestataires de services locaux de proximité. Solution moderne et intuitive via web et mobile.</p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                  <span class="badge bg-light text-dark px-3 py-2 rounded-pill border" data-i18n="portfolio_waxle_role">Co-Fondateur & CEO</span>
+                  <a href="#" target="_blank" class="text-primary fw-bold small" data-i18n="portfolio_waxle_website">Découvrir <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fluxy -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card card-project h-100 shadow-sm border-light">
               <div class="p-4 bg-light text-center border-bottom border-light"
                 style="height: 200px; display: flex; align-items: center; justify-content: center;">
@@ -156,60 +194,21 @@
                   alt="Fluxy">
               </div>
               <div class="card-body p-4">
-                <h4 class="fw-bold text-dark">FLUXY.</h4>
-                <p class="text-primary small fw-bold mb-3 ls-1">FINTECH / B2B SAAS</p>
-                <p class="text-muted small">Solution de gestion financière intelligente pour les PME en Afrique.
-                  Facilitation des paiements et gestion de trésorerie.</p>
+                <h4 class="fw-bold text-dark" data-i18n="portfolio_fluxy_name">FLUXY.</h4>
+                <p class="text-primary small fw-bold mb-3 ls-1" data-i18n="portfolio_fluxy_sector">FINTECH / B2B SAAS</p>
+                <p class="text-muted small" data-i18n="portfolio_fluxy_desc">Plateforme de gestion financière intelligente qui donne aux PME africaines des outils de paiement fluides, une visibilité en temps réel sur leur trésorerie et une automatisation comptable de classe mondiale.</p>
                 <div class="d-flex justify-content-between align-items-center mt-4">
-                  <span class="badge bg-light text-dark px-3 py-2 rounded-pill border">Co-Founder & CEO</span>
-                  <a href="https://fluxy.africa" target="_blank" class="text-primary fw-bold small">Site web <i
-                      class="bi bi-arrow-right"></i></a>
+                  <span class="badge bg-light text-dark px-3 py-2 rounded-pill border" data-i18n="portfolio_fluxy_role">Co-Fondateur & CEO</span>
+                  <a href="https://fluxy.africa" target="_blank" class="text-primary fw-bold small" data-i18n="portfolio_fluxy_website">Site Web <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- AgriTwin -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card card-project h-100 shadow-sm border-light">
-              <div class="p-4 bg-light text-center border-bottom border-light"
-                style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                <img src="assets/img/agritwin.png" class="img-fluid" style="max-height: 120px; object-fit: contain;"
-                  alt="AgriTwin">
-              </div>
-              <div class="card-body p-4">
-                <h4 class="fw-bold text-dark">AGRITWIN</h4>
-                <p class="text-primary small fw-bold mb-3 ls-1">AGRITECH / AI</p>
-                <p class="text-muted small">Usage des données satellites et IA pour créer des jumeaux numériques des
-                  exploitations agricoles.</p>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <span class="badge bg-light text-dark px-3 py-2 rounded-pill border">Seed Investor</span>
-                  <span class="text-muted small italic">En préparation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- EducBest
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card card-project h-100 shadow-sm border-light">
-              <div class="p-4 bg-light text-center border-bottom border-light"
-                style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                <img src="assets/img/educbest.png" class="img-fluid" style="max-height: 120px; object-fit: contain;"
-                  alt="EducBest">
-              </div>
-              <div class="card-body p-4">
-                <h4 class="fw-bold text-dark">EDUCBEST</h4>
-                <p class="text-primary small fw-bold mb-3 ls-1">EDTECH / ENTERPRISE</p>
-                <p class="text-muted small">Plateforme de formation et de gestion des talents pour les grandes
-                  entreprises africaines.</p>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <span class="badge bg-light text-dark px-3 py-2 rounded-pill border">Lead Builder</span>
-                  <a href="#" class="text-primary fw-bold small">Démo <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
+        <div class="text-center mt-5 pt-4 border-top" data-aos="fade-up">
+          <p class="text-muted mb-2" data-i18n="portfolio_cta_contact">Intéressé(e) par une collaboration ?</p>
+          <a href="contact.html" class="btn btn-premium btn-lg px-5 rounded-pill fw-bold" data-i18n="nav_contact">Entrons en Contact <i class="bi bi-arrow-right ms-1"></i></a>
         </div>
       </div>
     </section>
@@ -222,8 +221,7 @@
         <!-- Logo and Buttons Column -->
         <div class="col-lg-4 col-md-6 footer-about text-start">
           <h2 class="fw-bold mb-3 ls-2 text-white text-uppercase">NEHM VENTURE</h2>
-          <p class="text-white-50 small mb-4" data-i18n="footer_slogan">Building the Digital Future of Africa. Just
-            Build Things.</p>
+          <p class="text-white-50 small mb-4" data-i18n="footer_slogan">Propulser la Prochaine Génération d'Entrepreneurs Africains.</p>
           <div class="d-flex gap-3 mt-3">
             <button id="theme-toggle"
               class="btn btn-outline-light d-flex align-items-center justify-content-center rounded-circle"
@@ -242,27 +240,27 @@
 
         <!-- Links Column 1 -->
         <div class="col-lg-2 col-md-3 footer-links text-start">
-          <h4 class="text-white mb-3 fs-5" data-i18n="nav_about">À propos</h4>
+          <h4 class="text-white mb-3 fs-5" data-i18n="footer_nav_about">À propos</h4>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_about">Accueil</a></li>
+                data-i18n="footer_nav_home">Accueil</a></li>
             <li class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_about">À propos</a></li>
+                data-i18n="footer_nav_about">À propos</a></li>
             <li class="mb-2"><a href="portfolio.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_portfolio">Entreprises</a></li>
+                data-i18n="footer_nav_portfolio">Entreprises</a></li>
           </ul>
         </div>
 
         <!-- Links Column 2 -->
         <div class="col-lg-2 col-md-3 footer-links text-start">
-          <h4 class="text-white mb-3 fs-5" data-i18n="nav_books">Plus</h4>
+          <h4 class="text-white mb-3 fs-5" data-i18n="footer_more">Plus</h4>
           <ul class="list-unstyled">
             <li class="mb-2"><a href="books.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_books">Publications</a></li>
+                data-i18n="footer_nav_books">Publications</a></li>
             <li class="mb-2"><a href="resume.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_resume">Parcours</a></li>
-            <li class="mb-2"><a href="index.html#contact" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_contact">Contact</a></li>
+                data-i18n="footer_nav_resume">Parcours</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none small fw-bold"
+                data-i18n="footer_nav_contact">Contact</a></li>
           </ul>
         </div>
       </div>

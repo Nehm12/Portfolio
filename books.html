@@ -4,108 +4,323 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title data-i18n="page_title_books">Publications | Nehm Venture</title>
-  <meta
-    content="Portfolio de Nehm Hounga - Entrepreneur, Fondateur, Auteur et Coach Business. Bâtir le futur et propulser l'excellence."
-    name="description">
-  <meta content="Entrepreneur, Coach, Auteur, Venture Builder, Executive, Nehm Hounga" name="keywords">
+  <title data-i18n="page_title_books">Publications & Formations | Nehm Venture</title>
+  <meta content="Livres, Publications et Programmes de Formation de Nehm Hounga - Coach, Formateur et Entrepreneur." name="description">
+  <meta content="Formation, Leadership, Productivité, Finances, Coaching, Nehm Hounga" name="keywords">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.jpeg" rel="icon">
   <link href="assets/img/apple-touch-icon.jpeg" rel="apple-touch-icon">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700;900&family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400&display=swap"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Custom overrides for the White & Blue Creative Theme */
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h1, h2, h3, h4, h5, h6 {
       font-family: 'Outfit', sans-serif;
     }
+    .navmenu ul li a { color: var(--nav-color); font-weight: 600; }
+    .navmenu ul li a:hover, .navmenu ul li a.active { color: var(--accent-color); }
+    .footer { background: #0d1b2a; color: #fff; }
 
-    .navmenu ul li a {
-      color: var(--nav-color);
-      font-weight: 600;
-    }
-
-    .navmenu ul li a:hover,
-    .navmenu ul li a.active {
-      color: var(--accent-color);
-    }
-
-    .hero {
-      background: #fff;
-      overflow: hidden;
-    }
-
-    .hero-img-container {
+    /* Hero */
+    .hero-books {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1b2d4f 100%);
+      padding: 10rem 0 6rem;
+      text-align: center;
       position: relative;
+      overflow: hidden;
+    }
+    .hero-books::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-books h1 { color: #fff; font-weight: 900; }
+    .hero-books p { color: rgba(255,255,255,0.7); font-size: 1.2rem; }
+    .hero-books .badge-hero {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 0.5rem 1.5rem;
       border-radius: 2rem;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    .card-project {
-      border: none;
-      border-radius: 1.5rem;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      background: #fff;
-      overflow: hidden;
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
     }
-
-    .card-project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 30px 60px rgba(0, 119, 182, 0.15);
+    .section-header .label {
+      display: inline-block;
+      background: rgba(13,110,253,0.08);
+      color: #0d6efd;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
-
-    .section-title h2 {
-      font-weight: 800;
-      letter-spacing: -1px;
+    .section-header h2 {
+      font-weight: 900;
+      font-size: 2.5rem;
+      letter-spacing: -0.5px;
     }
-
-    .section-title p {
+    .section-header p {
       color: #6c757d;
       font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .service-box {
-      padding: 40px;
-      border-radius: 20px;
+    /* Book Cards */
+    .book-card {
+      border: none;
+      border-radius: 1.5rem;
+      overflow: hidden;
       background: #fff;
-      border: 1px solid #f0f0f0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      height: 100%;
+    }
+    .book-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .book-cover {
+      height: 320px;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .book-cover img {
+      width: 180px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+    .book-card:hover .book-cover img {
+      transform: scale(1.05) rotate(-2deg);
+    }
+    .book-cover .badge-status {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #0d6efd;
+      color: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .book-body {
+      padding: 1.75rem;
+    }
+    .book-body h4 {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .book-body .genre {
+      color: #0d6efd;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+    .book-body .desc {
+      color: #6c757d;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Training Cards */
+    .training-card {
+      border: 1px solid #e9ecef;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      background: #fff;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      height: 100%;
+    }
+    .training-card:hover {
+      border-color: transparent;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      transform: translateY(-8px);
+    }
+    .training-cover {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .training-cover .icon-bg {
+      font-size: 4rem;
+      opacity: 0.3;
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+    }
+    .training-cover .icon-center {
+      width: 70px;
+      height: 70px;
+      border-radius: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+    .training-body {
+      padding: 1.5rem;
+    }
+    .training-body .badge-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.35rem 0.8rem;
+      border-radius: 2rem;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+    .training-body h5 {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .training-body .desc {
+      color: #6c757d;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    .training-body .topics {
+      margin-bottom: 1.25rem;
+    }
+    .training-body .topics span {
+      display: inline-block;
+      background: #f8f9fa;
+      color: #495057;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 1rem;
+      margin: 0.15rem;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .gallery-item {
+      border-radius: 1rem;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
       transition: all 0.3s ease;
     }
-
-    .service-box:hover {
-      border-color: var(--accent-color);
-      background: var(--surface-color);
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
     }
 
-    .footer {
-      background: #0d1b2a;
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      border-radius: 2rem;
+      padding: 4rem;
+      text-align: center;
       color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 400px; height: 400px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+    .cta-section h2 {
+      font-weight: 900;
+      font-size: 2.25rem;
+    }
+    .cta-section p {
+      opacity: 0.85;
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 2rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-item h3 {
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: #0d6efd;
+      margin-bottom: 0;
+    }
+    .stat-item p {
+      color: #6c757d;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
     }
   </style>
 </head>
@@ -115,22 +330,19 @@
   <header id="header" class="header d-flex align-items-center fixed-top bg-white shadow-sm" style="height: 80px;">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center text-nowrap">
-        <h1 class="sitename fs-4 fw-bold m-0"><span class="text-dark">NEHM</span> <span
-            class="text-primary">VENTURE</span></h1>
+        <h1 class="sitename fs-4 fw-bold m-0"><span class="text-dark">NEHM</span> <span class="text-primary">VENTURE</span></h1>
       </a>
-
-      <nav id="navmenu" class="navmenu d-none">
+      <nav id="navmenu" class="navmenu ">
         <ul>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#about">À propos</a></li>
           <li><a href="portfolio.html" data-i18n="nav_portfolio">Entreprises</a></li>
           <li><a href="books.html" class="active" data-i18n="nav_books">Publications</a></li>
           <li><a href="resume.html" data-i18n="nav_resume">Parcours</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <div class="header-social-links d-none d-md-flex align-items-center gap-3">
-        <a href="index.html#contact" class="btn btn-premium px-4 rounded-pill small fw-bold text-nowrap"
+        <a href="contact.html" class="btn btn-premium px-4 rounded-pill small fw-bold text-nowrap"
           data-i18n="nav_connect">Let's Connect</a>
       </div>
     </div>
@@ -138,55 +350,241 @@
 
   <main class="main">
 
-    <!-- Books & Publications -->
-    <section id="books" class="books section bg-light py-5 border-top mt-5">
-      <div class="container section-title text-center mb-5" data-aos="fade-up">
-        <h2 class="display-6 fw-bold">Livres & Masterclasses</h2>
-        <p>Partager le savoir pour démocratiser l'excellence entrepreneuriale.</p>
+    <!-- Hero -->
+    <section class="hero-books">
+      <div class="container position-relative" data-aos="fade-up">
+        <span class="badge-hero mb-3 d-inline-block">Publications & Formations</span>
+        <h1 class="display-3 mb-3" data-i18n="books_title">Livres & Formations</h1>
+        <p class="mb-0" data-i18n="books_subtitle">Partager le savoir pour démocratiser l'excellence entrepreneuriale à travers le continent.</p>
       </div>
+    </section>
 
-      <div class="container">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class="h-100 bg-white p-5 rounded-5 shadow-sm">
-              <h3 class="fw-bold mb-4">Bibliothèque</h3>
-              <div class="d-flex gap-4 mb-5 pb-4 border-bottom">
-                <img src="assets/img/book-scaling.png" class="shadow rounded-3" style="width: 100px;" alt="Book">
-                <div>
-                  <h5 class="fw-bold">The Scaling Playbook</h5>
-                  <p class="small text-muted mb-2">Sortie 2025 • Guide complet pour fondateurs Tech en Afrique.</p>
-                  <a href="#" class="text-primary fw-bold small">Pré-commander <i class="bi bi-cart"></i></a>
-                </div>
+    <!-- Stats Bar -->
+    <section class="py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="stats-bar">
+          <div class="row gy-4 align-items-center">
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>2</h3>
+                <p>Livres Publiés</p>
               </div>
-              <div class="d-flex gap-4">
-                <img src="assets/img/book-leadership.png" class="shadow rounded-3" style="width: 100px;" alt="Book">
-                <div>
-                  <h5 class="fw-bold">Digital Leadership 2.0</h5>
-                  <p class="small text-muted mb-2">Sortie 2024 • Maîtriser l'IA et le futur du travail.</p>
-                  <a href="#" class="text-primary fw-bold small">Lire l'extrait <i
-                      class="bi bi-file-earmark-text"></i></a>
-                </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>4</h3>
+                <p>Programmes</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>100+</h3>
+                <p>Formés</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>4</h3>
+                <p>Pays</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="h-100 bg-white p-5 rounded-5 shadow-sm border-start border-primary border-5">
-              <h3 class="fw-bold mb-4">Programmes</h3>
-              <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h5 class="fw-bold mb-0">Bootcamp Venture Building</h5>
-                  <span class="badge bg-success">Ouvert</span>
-                </div>
-                <p class="text-muted small">Passer de l'idée au MVP en 8 semaines avec une méthodologie éprouvée
-                  appliquée à vos propres projets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books Gallery -->
+    <section id="books" class="py-5">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label" data-i18n="books_library">Bibliothèque</span>
+          <h2>Mes Publications</h2>
+          <p>Des ouvrages conçus pour outiller les entrepreneurs et leaders de demain.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5 col-md-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="book-card">
+              <div class="book-cover">
+                <img src="assets/img/book-scaling.png" alt="Le Scaling Playbook Africain">
+                <span class="badge-status">À venir 2025</span>
               </div>
-              <div class="mb-0">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                  <h5 class="fw-bold mb-0">Masterclass Leadership</h5>
-                  <span class="badge bg-primary">Sur invitation</span>
+              <div class="book-body">
+                <p class="genre mb-1">Business & Stratégie</p>
+                <h4 data-i18n="books_scaling_title">Le Scaling Playbook Africain</h4>
+                <p class="desc" data-i18n="books_scaling_desc">Le guide de référence pour les fondateurs tech qui construisent des entreprises scalables sur les marchés les plus complexes d'Afrique.</p>
+                <div class="d-flex gap-2 flex-wrap mb-3">
+                  <span class="badge bg-light text-dark border">Startup</span>
+                  <span class="badge bg-light text-dark border">Scaling</span>
+                  <span class="badge bg-light text-dark border">Afrique</span>
                 </div>
-                <p class="text-muted small">Développer l'intelligence émotionnelle et la vision stratégique nécessaire
-                  pour diriger des équipes décentralisées.</p>
+                <a href="#" class="btn btn-premium btn-sm rounded-pill px-4 w-100" data-i18n="books_scaling_cta">Pré-commander <i class="bi bi-cart ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="book-card">
+              <div class="book-cover" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+                <img src="assets/img/book-leadership.png" alt="Leadership Digital 2.0">
+                <span class="badge-status bg-warning text-dark">Disponible</span>
+              </div>
+              <div class="book-body">
+                <p class="genre mb-1">Leadership & Tech</p>
+                <h4 data-i18n="books_leadership_title">Leadership Digital 2.0</h4>
+                <p class="desc" data-i18n="books_leadership_desc">Maîtriser l'IA, les équipes à distance et le futur du travail dans le contexte africain.</p>
+                <div class="d-flex gap-2 flex-wrap mb-3">
+                  <span class="badge bg-light text-dark border">Leadership</span>
+                  <span class="badge bg-light text-dark border">IA</span>
+                  <span class="badge bg-light text-dark border">Remote</span>
+                </div>
+                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 w-100" data-i18n="books_leadership_cta">Lire l'Extrait <i class="bi bi-file-earmark-text ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Row -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <h4 class="fw-bold text-center mb-4">Galerie & Moments</h4>
+          </div>
+        </div>
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item">
+            <img src="assets/img/my.JPG" alt="Nehm Hounga">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/book-scaling.png" alt="Book Cover">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/book-leadership.png" alt="Book Cover">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/certs.png" alt="Certifications">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/hero.jpg" alt="Event">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="trainings" class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label" data-i18n="books_programs">Programmes de Formation</span>
+          <h2 data-i18n="books_programs">Programmes de Formation</h2>
+          <p data-i18n="books_programs_intro">Des formations professionnelles conçues pour les entrepreneurs, équipes et organisations à travers l'Afrique.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Leadership -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="training-card">
+              <div class="training-cover" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+                <div class="icon-center text-success">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <i class="bi bi-lightbulb icon-bg text-success"></i>
+              </div>
+              <div class="training-body">
+                <span class="badge-status bg-success bg-opacity-10 text-success" data-i18n="books_training_leader_badge">Le Plus Populaire</span>
+                <h5 data-i18n="books_training_leader_title">Leadership & Vision Stratégique</h5>
+                <p class="desc" data-i18n="books_training_leader_desc">Développer l'intelligence émotionnelle, les cadres de prise de décision et le mindset stratégique.</p>
+                <div class="topics">
+                  <span>Intelligence émotionnelle</span>
+                  <span>Prise de décision</span>
+                  <span>Stratégie</span>
+                  <span>Management</span>
+                </div>
+                <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 w-100">S'inscrire <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Productivity -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="training-card">
+              <div class="training-cover" style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);">
+                <div class="icon-center text-warning">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <i class="bi bi-clock-history icon-bg text-warning"></i>
+              </div>
+              <div class="training-body">
+                <span class="badge-status bg-success bg-opacity-10 text-success" data-i18n="books_training_prod_badge">Ouvert</span>
+                <h5 data-i18n="books_training_prod_title">Productivité & Gestion du Temps</h5>
+                <p class="desc" data-i18n="books_training_prod_desc">Maîtriser votre workflow, éliminer les distractions et construire des systèmes qui multiplient votre output.</p>
+                <div class="topics">
+                  <span>Workflow</span>
+                  <span>Time blocking</span>
+                  <span>Systèmes</span>
+                  <span>Focus</span>
+                </div>
+                <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 w-100">S'inscrire <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Finance -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="training-card">
+              <div class="training-cover" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">
+                <div class="icon-center text-primary">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <i class="bi bi-graph-up-arrow icon-bg text-primary"></i>
+              </div>
+              <div class="training-body">
+                <span class="badge-status bg-success bg-opacity-10 text-success" data-i18n="books_training_fin_badge">Ouvert</span>
+                <h5 data-i18n="books_training_fin_title">Économie & Finances Personnelles</h5>
+                <p class="desc" data-i18n="books_training_fin_desc">Comprendre la littératie financière, la gestion de cash flow et les principes d'investissement.</p>
+                <div class="topics">
+                  <span>Finance</span>
+                  <span>Cash flow</span>
+                  <span>Investissement</span>
+                  <span>Budget</span>
+                </div>
+                <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 w-100">S'inscrire <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ecosystem -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="training-card">
+              <div class="training-cover" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);">
+                <div class="icon-center" style="color: #9c27b0;">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <i class="bi bi-diagram-3 icon-bg" style="color: #9c27b0;"></i>
+              </div>
+              <div class="training-body">
+                <span class="badge-status bg-primary bg-opacity-10 text-primary" data-i18n="books_training_eco_badge">Sur Demande</span>
+                <h5 data-i18n="books_training_eco_title">Design d'Écosystème d'Entreprise</h5>
+                <p class="desc" data-i18n="books_training_eco_desc">Concevoir l'écosystème complet — de la structure du leadership à la durabilité financière.</p>
+                <div class="topics">
+                  <span>Écosystème</span>
+                  <span>Structure</span>
+                  <span>Leadership</span>
+                  <span>Croissance</span>
+                </div>
+                <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 w-100">S'inscrire <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <div class="cta-section">
+              <h2 class="mb-3">Prêt à Transformer Votre Parcours ?</h2>
+              <p>Coaching individuel, formation d'équipe ou programme sur mesure — construisons ensemble votre prochaine étape.</p>
+              <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html" class="btn btn-light btn-lg px-5 rounded-pill fw-bold">Entrons en Contact <i class="bi bi-arrow-right ms-1"></i></a>
               </div>
             </div>
           </div>
@@ -199,82 +597,46 @@
   <footer id="footer" class="footer py-5 mt-auto">
     <div class="container py-4">
       <div class="row gy-4">
-        <!-- Logo and Buttons Column -->
         <div class="col-lg-4 col-md-6 footer-about text-start">
           <h2 class="fw-bold mb-3 ls-2 text-white text-uppercase">NEHM VENTURE</h2>
-          <p class="text-white-50 small mb-4" data-i18n="footer_slogan">Building the Digital Future of Africa. Just
-            Build Things.</p>
+          <p class="text-white-50 small mb-4" data-i18n="footer_slogan">Propulser la Prochaine Génération d'Entrepreneurs Africains.</p>
           <div class="d-flex gap-3 mt-3">
-            <button id="theme-toggle"
-              class="btn btn-outline-light d-flex align-items-center justify-content-center rounded-circle"
-              style="width: 45px; height: 45px; padding: 0;">
-              <i class="bi bi-moon fs-5"></i>
-            </button>
-            <button id="lang-toggle"
-              class="btn btn-outline-light d-flex align-items-center justify-content-center rounded-circle"
-              style="width: 45px; height: 45px; padding: 0;">
-              <i class="bi bi-globe2 fs-5"></i>
-            </button>
+            <button id="theme-toggle" class="btn btn-outline-light d-flex align-items-center justify-content-center rounded-circle" style="width: 45px; height: 45px; padding: 0;"><i class="bi bi-moon fs-5"></i></button>
+            <button id="lang-toggle" class="btn btn-outline-light d-flex align-items-center justify-content-center rounded-circle" style="width: 45px; height: 45px; padding: 0;"><i class="bi bi-globe2 fs-5"></i></button>
           </div>
         </div>
-
         <div class="col-lg-2 col-md-3"></div>
-
-        <!-- Links Column 1 -->
         <div class="col-lg-2 col-md-3 footer-links text-start">
-          <h4 class="text-white mb-3 fs-5" data-i18n="nav_about">À propos</h4>
+          <h4 class="text-white mb-3 fs-5" data-i18n="footer_nav_about">À propos</h4>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_about">Accueil</a></li>
-            <li class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_about">À propos</a></li>
-            <li class="mb-2"><a href="portfolio.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_portfolio">Entreprises</a></li>
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none small fw-bold" data-i18n="footer_nav_home">Accueil</a></li>
+            <li class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none small fw-bold" data-i18n="footer_nav_about">À propos</a></li>
+            <li class="mb-2"><a href="portfolio.html" class="text-white-50 text-decoration-none small fw-bold" data-i18n="footer_nav_portfolio">Entreprises</a></li>
           </ul>
         </div>
-
-        <!-- Links Column 2 -->
         <div class="col-lg-2 col-md-3 footer-links text-start">
-          <h4 class="text-white mb-3 fs-5" data-i18n="nav_books">Plus</h4>
+          <h4 class="text-white mb-3 fs-5" data-i18n="footer_more">Plus</h4>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="books.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_books">Publications</a></li>
-            <li class="mb-2"><a href="resume.html" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_resume">Parcours</a></li>
-            <li class="mb-2"><a href="index.html#contact" class="text-white-50 text-decoration-none small fw-bold"
-                data-i18n="nav_contact">Contact</a></li>
+            <li class="mb-2"><a href="books.html" class="text-white-50 text-decoration-none small fw-bold" data-i18n="footer_nav_books">Publications</a></li>
+            <li class="mb-2"><a href="resume.html" class="text-white-50 text-decoration-none small fw-bold" data-i18n="footer_nav_resume">Parcours</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none small fw-bold" data-i18n="footer_nav_contact">Contact</a></li>
           </ul>
         </div>
       </div>
-
       <div class="border-top border-secondary pt-4 mt-4 text-white-50 small text-center">
-        <p class="m-0" data-i18n="footer_rights">&copy;
-          <script>document.write(new Date().getFullYear())</script> NEHM VENTURE. Tous droits réservés.
-        </p>
+        <p class="m-0" data-i18n="footer_rights">&copy; <script>document.write(new Date().getFullYear())</script> NEHM VENTURE. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top"
-    class="scroll-top btn btn-premium d-flex align-items-center justify-content-center rounded-circle shadow-lg"
-    style="width: 45px; height: 45px;"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#" id="scroll-top" class="scroll-top btn btn-premium d-flex align-items-center justify-content-center rounded-circle shadow-lg" style="width: 45px; height: 45px;"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- i18n Language Script -->
   <script src="assets/js/i18n.js"></script>
-
-  <!-- Theme JS File -->
   <script src="assets/js/theme.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
