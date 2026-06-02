@@ -24,105 +24,7 @@
 
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Outfit', sans-serif;
-    }
-    .navmenu ul li a { color: var(--nav-color); font-weight: 600; }
-    .navmenu ul li a:hover, .navmenu ul li a.active { color: var(--accent-color); }
-    .footer { background: #0d1b2a; color: #fff; }
 
-    .timeline-item {
-      position: relative;
-      padding-left: 2rem;
-      margin-bottom: 2rem;
-    }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.5rem;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #0d6efd;
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 3px rgba(13,110,253,0.2);
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      left: 6px;
-      top: 1.5rem;
-      width: 2px;
-      height: calc(100% + 0.5rem);
-      background: #e9ecef;
-    }
-    .timeline-item:last-child::after { display: none; }
-
-    .cert-card {
-      border: 1px solid #e9ecef;
-      border-radius: 1rem;
-      padding: 1.25rem;
-      background: #fff;
-      transition: all 0.3s ease;
-      height: 100%;
-    }
-    .cert-card:hover {
-      border-color: #0d6efd;
-      box-shadow: 0 8px 20px rgba(13,110,253,0.1);
-    }
-    .cert-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 0.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .project-card {
-      border: none;
-      border-radius: 1rem;
-      transition: all 0.3s ease;
-      background: #fff;
-      overflow: hidden;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,119,182,0.15);
-    }
-    .cert-badge-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #f8f9fa;
-      border: 1px solid #e9ecef;
-      border-radius: 2rem;
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    .hero-resume {
-      background: linear-gradient(135deg, #0d1b2a 0%, #1b2d4f 100%);
-      padding: 8rem 0 5rem;
-      text-align: center;
-    }
-    .hero-resume h1 { color: #fff; font-weight: 900; }
-    .hero-resume p { color: rgba(255,255,255,0.7); font-size: 1.15rem; }
-
-    .cert-featured {
-      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
-      border: 2px solid #c5d7f7;
-      border-radius: 1.25rem;
-      padding: 2rem;
-    }
-  </style>
 </head>
 
 <body class="resume-page">
@@ -167,53 +69,87 @@
         </div>
 
         <div class="row g-4">
-          <!-- Harvard -->
+
+          <!-- ─── Harvard ─── -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="cert-featured h-100 text-center">
-              <div class="cert-logo bg-danger bg-opacity-10 text-danger mx-auto">
-                <i class="bi bi-bank"></i>
+            <div class="cert-card h-100 text-center p-0 overflow-hidden"
+              data-lightbox data-caption="Harvard — Climate Venture Fellow & Effective Leadership"
+              style="cursor:pointer; border-radius:1rem;">
+              <div class="position-relative overflow-hidden" style="height:200px; border-radius:1rem 1rem 0 0;">
+                <img src="assets/img/cert-harvard.png" alt="Certificat Harvard"
+                  style="width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center gallery-overlay">
+                  <i class="bi bi-zoom-in" style="font-size:2rem; color:#fff;"></i>
+                </div>
               </div>
-              <h6 class="fw-bold mb-1">Harvard University</h6>
-              <p class="small text-primary fw-bold mb-2">Climate Venture Fellow & Effective Leadership</p>
-              <p class="small text-muted mb-0">Harvard Innovation Labs — Climate Venture Cohort (Jan 2026) + Aspire Leaders Program — Effective Leadership (Déc 2025)</p>
+              <div class="p-3">
+                <span class="badge rounded-pill bg-danger bg-opacity-10 text-danger mb-2 fw-bold" style="font-size:0.7rem; letter-spacing:1px;">HARVARD UNIVERSITY</span>
+                <h6 class="fw-bold mb-1">Climate Venture Fellow &amp; Effective Leadership</h6>
+                <p class="small text-muted mb-0">Harvard Innovation Labs (Jan 2026) + Aspire Leaders Program (Déc 2025)</p>
+              </div>
             </div>
           </div>
 
-          <!-- Google -->
+          <!-- ─── Google ─── -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="cert-featured h-100 text-center">
-              <div class="cert-logo bg-success bg-opacity-10 text-success mx-auto">
-                <i class="bi bi-google"></i>
+            <div class="cert-card h-100 text-center p-0 overflow-hidden"
+              data-lightbox data-caption="Google — Cloud Innovator & Project Management"
+              style="cursor:pointer; border-radius:1rem;">
+              <div class="position-relative overflow-hidden" style="height:200px; border-radius:1rem 1rem 0 0;">
+                <img src="assets/img/cert-google.png" alt="Certificat Google"
+                  style="width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center gallery-overlay">
+                  <i class="bi bi-zoom-in" style="font-size:2rem; color:#fff;"></i>
+                </div>
               </div>
-              <h6 class="fw-bold mb-1">Google</h6>
-              <p class="small text-primary fw-bold mb-2">Cloud Innovator & Project Management</p>
-              <p class="small text-muted mb-0">Google for Developers — Google Cloud Innovator (Fév 2026) + Foundations of Project Management (Avr 2026)</p>
+              <div class="p-3">
+                <span class="badge rounded-pill bg-success bg-opacity-10 text-success mb-2 fw-bold" style="font-size:0.7rem; letter-spacing:1px;">GOOGLE</span>
+                <h6 class="fw-bold mb-1">Cloud Innovator &amp; Project Management</h6>
+                <p class="small text-muted mb-0">Google for Developers — Cloud Innovator (Fév 2026) + Project Management (Avr 2026)</p>
+              </div>
             </div>
           </div>
 
-          <!-- Amazon AWS -->
+          <!-- ─── Amazon AWS ─── -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="cert-featured h-100 text-center">
-              <div class="cert-logo bg-warning bg-opacity-10 text-warning mx-auto">
-                <i class="bi bi-cloud"></i>
+            <div class="cert-card h-100 text-center p-0 overflow-hidden"
+              data-lightbox data-caption="Amazon AWS — Full Stack Developer & Cloud Practitioner (6 certifications)"
+              style="cursor:pointer; border-radius:1rem;">
+              <div class="position-relative overflow-hidden" style="height:200px; border-radius:1rem 1rem 0 0;">
+                <img src="assets/img/cert-aws.png" alt="Certificat AWS"
+                  style="width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center gallery-overlay">
+                  <i class="bi bi-zoom-in" style="font-size:2rem; color:#fff;"></i>
+                </div>
               </div>
-              <h6 class="fw-bold mb-1">Amazon AWS</h6>
-              <p class="small text-primary fw-bold mb-2">Full Stack Developer & Cloud Essentials</p>
-              <p class="small text-muted mb-0">6 certifications : Java Programming, Full Stack Web Dev, Generative AI, Database Management, Cloud Practitioner, Technical Essentials</p>
+              <div class="p-3">
+                <span class="badge rounded-pill bg-warning bg-opacity-10 text-warning mb-2 fw-bold" style="font-size:0.7rem; letter-spacing:1px;">AMAZON AWS</span>
+                <h6 class="fw-bold mb-1">Full Stack Developer &amp; Cloud Practitioner</h6>
+                <p class="small text-muted mb-0">6 certifications : Java, Full Stack, Gen AI, Database, Cloud, Technical Essentials</p>
+              </div>
             </div>
           </div>
 
-          <!-- JCI -->
+          <!-- ─── JCI ─── -->
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="cert-featured h-100 text-center">
-              <div class="cert-logo bg-info bg-opacity-10 text-info mx-auto">
-                <i class="bi bi-award"></i>
+            <div class="cert-card h-100 text-center p-0 overflow-hidden"
+              data-lightbox data-caption="JCI Africa — Certified Trainer Presenter Level 1 & Outstanding Member 2024"
+              style="cursor:pointer; border-radius:1rem;">
+              <div class="position-relative overflow-hidden" style="height:200px; border-radius:1rem 1rem 0 0;">
+                <img src="assets/img/cert-jci.png" alt="Certificat JCI"
+                  style="width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center gallery-overlay">
+                  <i class="bi bi-zoom-in" style="font-size:2rem; color:#fff;"></i>
+                </div>
               </div>
-              <h6 class="fw-bold mb-1">JCI Africa & Middle East</h6>
-              <p class="small text-primary fw-bold mb-2">Certified Trainer — Presenter Level 1</p>
-              <p class="small text-muted mb-0">Formateur Certifié Présentateur Level 1 — JCI Africa & Middle East (Fév 2026). Outstanding Occasional Member of the Year 2024.</p>
+              <div class="p-3">
+                <span class="badge rounded-pill bg-info bg-opacity-10 text-info mb-2 fw-bold" style="font-size:0.7rem; letter-spacing:1px;">JCI AFRICA</span>
+                <h6 class="fw-bold mb-1">Certified Trainer — Presenter Level 1</h6>
+                <p class="small text-muted mb-0">JCI Africa &amp; Middle East (Fév 2026) · Outstanding Member of the Year 2024</p>
+              </div>
             </div>
           </div>
+
         </div>
 
         <div class="row g-3 mt-4">
@@ -221,7 +157,7 @@
             <div class="d-flex flex-wrap gap-2 justify-content-center">
               <span class="cert-badge-inline"><i class="bi bi-check-circle-fill text-success"></i> EF SET English C2 (72/100)</span>
               <span class="cert-badge-inline"><i class="bi bi-check-circle-fill text-success"></i> OpenClassrooms — AI Principles</span>
-              <span class="cert-badge-inline"><i class="bi bi-check-circle-fill text-success"></i> OpenClassrooms — Git & GitHub Expert</span>
+              <span class="cert-badge-inline"><i class="bi bi-check-circle-fill text-success"></i> OpenClassrooms — Git &amp; GitHub Expert</span>
               <span class="cert-badge-inline"><i class="bi bi-check-circle-fill text-success"></i> OpenClassrooms — Algorithms</span>
             </div>
           </div>
@@ -431,12 +367,83 @@
   <a href="#" id="scroll-top" class="scroll-top btn btn-premium d-flex align-items-center justify-content-center rounded-circle shadow-lg" style="width: 45px; height: 45px;"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
+  <!-- ══════════ LIGHTBOX ══════════ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'image">
+    <div id="lightbox-backdrop"></div>
+    <button id="lightbox-close" aria-label="Fermer"><i class="bi bi-x-lg"></i></button>
+    <button id="lightbox-prev"  aria-label="Précédent"><i class="bi bi-chevron-left"></i></button>
+    <button id="lightbox-next"  aria-label="Suivant"><i class="bi bi-chevron-right"></i></button>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+  /* ── Lightbox ── */
+  (function () {
+    const lb        = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lightbox-img');
+    const lbCaption = document.getElementById('lightbox-caption');
+    const lbClose   = document.getElementById('lightbox-close');
+    const lbPrev    = document.getElementById('lightbox-prev');
+    const lbNext    = document.getElementById('lightbox-next');
+    const lbBack    = document.getElementById('lightbox-backdrop');
+
+    const items = Array.from(document.querySelectorAll('[data-lightbox]'));
+    let current = 0;
+
+    function show(index) {
+      current = (index + items.length) % items.length;
+      const el  = items[current];
+      const img = el.querySelector('img');
+      lbImg.style.opacity = '0';
+      lbImg.src           = img.src;
+      lbImg.alt           = img.alt;
+      lbCaption.textContent = el.dataset.caption || img.alt || '';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      lbImg.onload = () => { lbImg.style.opacity = '1'; };
+      // navigation arrows visibility
+      lbPrev.style.display = items.length > 1 ? '' : 'none';
+      lbNext.style.display = items.length > 1 ? '' : 'none';
+    }
+
+    function close() {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { lbImg.src = ''; }, 300);
+    }
+
+    items.forEach((el, i) => el.addEventListener('click', () => show(i)));
+    lbClose.addEventListener('click', close);
+    lbBack.addEventListener('click', close);
+    lbPrev.addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+    lbNext.addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'Escape')      close();
+      if (e.key === 'ArrowLeft')   show(current - 1);
+      if (e.key === 'ArrowRight')  show(current + 1);
+    });
+
+    /* Touch / swipe support */
+    let touchStartX = 0;
+    lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend',   (e) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) dx < 0 ? show(current + 1) : show(current - 1);
+    });
+  })();
+  </script>
 
 </body>
 

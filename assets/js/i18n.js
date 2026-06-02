@@ -91,11 +91,22 @@ const translations = {
         "books_subtitle": "Sharing knowledge to democratize entrepreneurial excellence across the continent.",
         "books_library": "Library",
         "books_scaling_title": "The African Scaling Playbook",
+        "books_scaling_badge": "Pre-order 2025",
+        "books_scaling_genre": "Business & Strategy",
         "books_scaling_desc": "Release 2025 • The definitive guide for tech founders building scalable businesses in Africa's most complex markets.",
+        "books_scaling_desc_long": "The definitive guide for tech founders building scalable businesses in Africa's most complex markets. From product validation to multi-country expansion, this book covers concrete strategies, mistakes to avoid, and proven frameworks for going from 0 to a sustainable company.",
         "books_scaling_cta": "Pre-order Now",
+        "books_meta_pages_scaling": "~250 pages",
+        "books_meta_audience_scaling": "Founders & Entrepreneurs",
         "books_leadership_title": "Digital Leadership 2.0",
+        "books_leadership_badge": "Available",
+        "books_leadership_genre": "Leadership & Tech",
         "books_leadership_desc": "Release 2024 • Mastering AI, remote teams, and the future of work in the African context.",
+        "books_leadership_desc_long": "An essential book for Africa's leaders of tomorrow. How to master AI, manage remote teams, and adapt to the future of work in the African context. Practical tools for developing authentic leadership in the digital age, combining strategic vision and emotional intelligence.",
         "books_leadership_cta": "Read Excerpt",
+        "books_meta_pages_leadership": "~200 pages",
+        "books_meta_audience_leadership": "Managers & Leaders",
+        "books_whatsapp_cta": "WhatsApp — Learn More",
         "books_programs": "Training Programs",
         "books_programs_intro": "Professional training programs designed for entrepreneurs, teams, and organizations across Africa.",
         "books_training_leader_title": "Leadership & Strategic Vision",
@@ -300,11 +311,22 @@ const translations = {
         "books_subtitle": "Partager le savoir pour démocratiser l'excellence entrepreneuriale à travers le continent.",
         "books_library": "Bibliothèque",
         "books_scaling_title": "Le Scaling Playbook Africain",
+        "books_scaling_badge": "Pré-commande 2025",
+        "books_scaling_genre": "Business & Stratégie",
         "books_scaling_desc": "Sortie 2025 • Le guide de référence pour les fondateurs tech qui construisent des entreprises scalables sur les marchés les plus complexes d'Afrique.",
+        "books_scaling_desc_long": "Le guide de référence pour les fondateurs tech qui construisent des entreprises scalables sur les marchés africains. De la validation du produit à l'expansion multi-pays, ce livre couvre les stratégies concrètes, les erreurs à éviter et les frameworks éprouvés pour passer de 0 à une entreprise durable.",
         "books_scaling_cta": "Pré-commander",
+        "books_meta_pages_scaling": "~250 pages",
+        "books_meta_audience_scaling": "Fondateurs & Entrepreneurs",
         "books_leadership_title": "Leadership Digital 2.0",
+        "books_leadership_badge": "Disponible",
+        "books_leadership_genre": "Leadership & Tech",
         "books_leadership_desc": "Sortie 2024 • Maîtriser l'IA, les équipes à distance et le futur du travail dans le contexte africain.",
+        "books_leadership_desc_long": "Un livre essentiel pour les leaders africains de demain. Comment maîtriser l'IA, piloter des équipes à distance et s'adapter au futur du travail dans le contexte africain. Des outils pratiques pour développer un leadership authentique à l'ère digitale, alliant vision stratégique et intelligence émotionnelle.",
         "books_leadership_cta": "Lire l'Extrait",
+        "books_meta_pages_leadership": "~200 pages",
+        "books_meta_audience_leadership": "Managers & Leaders",
+        "books_whatsapp_cta": "WhatsApp — En savoir plus",
         "books_programs": "Programmes de Formation",
         "books_programs_intro": "Des formations professionnelles conçues pour les entrepreneurs, équipes et organisations à travers l'Afrique.",
         "books_training_leader_title": "Leadership & Vision Stratégique",
@@ -437,7 +459,22 @@ document.addEventListener('DOMContentLoaded', () => {
 function setLanguage(lang) {
     localStorage.setItem('site_lang', lang);
 
+    // Update document.title from the <title data-i18n="..."> tag
+    const titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl) {
+        const titleKey = titleEl.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][titleKey]) {
+            document.title = translations[lang][titleKey];
+        }
+    }
+
+    // Update the <html lang="..."> attribute
+    document.documentElement.lang = lang;
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
+        // Skip the <title> element — already handled above
+        if (el.tagName === 'TITLE') return;
+
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
