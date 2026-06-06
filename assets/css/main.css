@@ -2503,3 +2503,36 @@ body.dark-theme .scroll-top {
 body.dark-theme .cta-banner.bg-primary {
   background-color: #004a8f !important;
 }
+
+/* Header Toggle Buttons */
+.header-toggle-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  color: var(--nav-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.header-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+body.dark-theme .header-toggle-btn {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body.dark-theme .header-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}

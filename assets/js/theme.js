@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
     const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
@@ -26,4 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Language toggle redirect
+    const langToggleBtn = document.getElementById('lang-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentLang = document.documentElement.lang || 'fr';
+            const newLang = currentLang === 'fr' ? 'en' : 'fr';
+            
+            localStorage.setItem('site_lang', newLang);
+
+            const path = window.location.pathname;
+            let newPath;
+            if (path.includes('/fr/')) {
+                newPath = path.replace('/fr/', '/' + newLang + '/');
+            } else if (path.includes('/en/')) {
+                newPath = path.replace('/en/', '/' + newLang + '/');
+            } else {
+                // Handle direct file paths
+                newPath = path.replace('/' + currentLang + '/', '/' + newLang + '/');
+            }
+            window.location.href = newPath;
+        });
+    }
 });
+

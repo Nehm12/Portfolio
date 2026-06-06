@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<!-- include head -->
+
+<body class="books-page">
+
+  <!-- include header -->
+
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="hero-books">
+      <div class="container position-relative" data-aos="fade-up">
+        <span class="badge-hero mb-3 d-inline-block">Publications & Formations</span>
+        <h1 class="display-3 mb-3">{{books_title}}</h1>
+        <p class="mb-0">{{books_subtitle}}</p>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="stats-bar">
+          <div class="row gy-4 align-items-center">
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>2</h3>
+                <p>Livres Publiés</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>4</h3>
+                <p>Programmes</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>100+</h3>
+                <p>Formés</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <h3>4</h3>
+                <p>Pays</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books Gallery -->
+    <section id="books" class="py-5">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label">{{books_library}}</span>
+          <h2>Mes Publications</h2>
+          <p>Des ouvrages conçus pour outiller les entrepreneurs et leaders de demain.</p>
+        </div>
+
+        <div class="row g-5 justify-content-center">
+
+          <!-- Book 1 : The African Scaling Playbook -->
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+            <div class="book-card d-flex flex-column flex-md-row overflow-hidden">
+              <!-- Cover -->
+              <div class="book-cover flex-shrink-0" style="width: 100%; max-width: 340px; height: auto; min-height: 380px; background: linear-gradient(135deg, #e8f0fe 0%, #c5d7f7 100%);">
+                <img src="../assets/img/book-scaling.png" alt="Le Scaling Playbook Africain" style="width: 200px; height: 290px; object-fit: cover; border-radius: 0.75rem; box-shadow: 0 16px 40px rgba(0,0,0,0.25); transition: transform 0.4s ease;">
+                <span class="badge-status" style="background: linear-gradient(135deg, #0077b6, #00b4d8);">{{books_scaling_badge}}</span>
+              </div>
+
+              <!-- Content -->
+              <div class="book-body flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge rounded-pill" style="background: rgba(0,119,182,0.1); color: #0077b6; font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;">{{books_scaling_genre}}</span>
+                    <span class="badge bg-light text-dark border" style="font-size:0.7rem;">2025</span>
+                  </div>
+                  <h4 class="fw-bold mb-2">{{books_scaling_title}}</h4>
+                  <p class="desc mb-3">{{books_scaling_desc_long}}</p>
+
+                  <!-- Metadata -->
+                  <div class="d-flex flex-wrap gap-3 mb-3 small text-muted">
+                    <span><i class="bi bi-file-earmark-text text-primary me-1"></i><span>{{books_meta_pages_scaling}}</span></span>
+                    <span><i class="bi bi-people text-primary me-1"></i><span>{{books_meta_audience_scaling}}</span></span>
+                    <span><i class="bi bi-translate text-primary me-1"></i>Français / English</span>
+                  </div>
+
+                  <!-- Tags -->
+                  <div class="d-flex gap-2 flex-wrap mb-4">
+                    <span class="badge bg-light text-dark border">Startup</span>
+                    <span class="badge bg-light text-dark border">Scaling</span>
+                    <span class="badge bg-light text-dark border">Afrique</span>
+                    <span class="badge bg-light text-dark border">Tech</span>
+                    <span class="badge bg-light text-dark border">PMF</span>
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                  <a id="wa-scaling" href="https://wa.me/2290194630235?text=Bonjour%20Nehm%20%F0%9F%91%8B%2C%20j%27ai%20vu%20votre%20livre%20*Le%20Scaling%20Playbook%20Africain*%20sur%20votre%20portfolio%20et%20j%27aimerais%20en%20savoir%20plus%20sur%20les%20d%C3%A9tails%20et%20la%20disponibilit%C3%A9.%20Merci%20!" target="_blank" rel="noopener" class="btn btn-premium btn-sm rounded-pill px-4 d-flex align-items-center justify-content-center gap-2 fw-bold">
+                    <i class="bi bi-whatsapp fs-6"></i> {{books_whatsapp_cta}}
+                  </a>
+                  <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-cart"></i> {{books_scaling_cta}}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book 2 : Leadership Digital 2.0 -->
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
+            <div class="book-card d-flex flex-column flex-md-row overflow-hidden">
+              <!-- Cover -->
+              <div class="book-cover flex-shrink-0" style="width: 100%; max-width: 340px; height: auto; min-height: 380px; background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+                <img src="../assets/img/book-leadership.png" alt="Leadership Digital 2.0" style="width: 200px; height: 290px; object-fit: cover; border-radius: 0.75rem; box-shadow: 0 16px 40px rgba(0,0,0,0.25); transition: transform 0.4s ease;">
+                <span class="badge-status bg-warning text-dark">{{books_leadership_badge}}</span>
+              </div>
+
+              <!-- Content -->
+              <div class="book-body flex-grow-1 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge rounded-pill" style="background: rgba(255,152,0,0.12); color: #e65100; font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;">{{books_leadership_genre}}</span>
+                    <span class="badge bg-light text-dark border" style="font-size:0.7rem;">2024</span>
+                  </div>
+                  <h4 class="fw-bold mb-2">{{books_leadership_title}}</h4>
+                  <p class="desc mb-3">{{books_leadership_desc_long}}</p>
+
+                  <!-- Metadata -->
+                  <div class="d-flex flex-wrap gap-3 mb-3 small text-muted">
+                    <span><i class="bi bi-file-earmark-text text-warning me-1"></i><span>{{books_meta_pages_leadership}}</span></span>
+                    <span><i class="bi bi-people text-warning me-1"></i><span>{{books_meta_audience_leadership}}</span></span>
+                    <span><i class="bi bi-translate text-warning me-1"></i>Français</span>
+                  </div>
+
+                  <!-- Tags -->
+                  <div class="d-flex gap-2 flex-wrap mb-4">
+                    <span class="badge bg-light text-dark border">Leadership</span>
+                    <span class="badge bg-light text-dark border">IA</span>
+                    <span class="badge bg-light text-dark border">Remote</span>
+                    <span class="badge bg-light text-dark border">Management</span>
+                    <span class="badge bg-light text-dark border">Futur du travail</span>
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                  <a id="wa-leadership" href="https://wa.me/2290194630235?text=Bonjour%20Nehm%20%F0%9F%91%8B%2C%20j%27ai%20vu%20votre%20livre%20*Leadership%20Digital%202.0*%20sur%20votre%20portfolio%20et%20j%27aimerais%20en%20savoir%20plus%20sur%20les%20d%C3%A9tails%20et%20la%20disponibilit%C3%A9.%20Merci%20!" target="_blank" rel="noopener" class="btn btn-premium btn-sm rounded-pill px-4 d-flex align-items-center justify-content-center gap-2 fw-bold">
+                    <i class="bi bi-whatsapp fs-6"></i> {{books_whatsapp_cta}}
+                  </a>
+                  <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-file-earmark-text"></i> {{books_leadership_cta}}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Row -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <h4 class="fw-bold text-center mb-4">Galerie & Moments</h4>
+          </div>
+        </div>
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item" data-lightbox data-caption="Nehm Hounga">
+            <img src="../assets/img/my.JPG" alt="Nehm Hounga">
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item" data-lightbox data-caption="Le Scaling Playbook Africain">
+            <img src="../assets/img/book-scaling.png" alt="Le Scaling Playbook Africain">
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item" data-lightbox data-caption="Leadership Digital 2.0">
+            <img src="../assets/img/book-leadership.png" alt="Leadership Digital 2.0">
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item" data-lightbox data-caption="Certifications">
+            <img src="../assets/img/certs.png" alt="Certifications">
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item" data-lightbox data-caption="Moments & Événements">
+            <img src="../assets/img/hero.jpg" alt="Moments & Événements">
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="trainings" class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="label">{{books_programs}}</span>
+          <h2>{{books_programs}}</h2>
+          <p>{{books_programs_intro}}</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Leadership -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="training-card">
+              <div class="training-cover p-0 overflow-hidden position-relative" style="height: 220px;">
+                <img src="../assets/img/training-leadership.png" alt="Leadership & Vision Stratégique" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(13,27,42,0.55) 100%);"></div>
+                <span class="badge-status position-absolute" style="bottom:1rem; left:1rem; top:auto; right:auto; background: linear-gradient(135deg,#2e7d32,#43a047);">{{books_training_leader_badge}}</span>
+              </div>
+              <div class="training-body">
+                <h5>{{books_training_leader_title}}</h5>
+                <p class="desc">{{books_training_leader_desc}}</p>
+                <div class="topics">
+                  <span>Intelligence émotionnelle</span>
+                  <span>Prise de décision</span>
+                  <span>Stratégie</span>
+                  <span>Management</span>
+                </div>
+                <a href="https://wa.me/2290194630235?text=Bonjour%20Nehm%20%F0%9F%91%8B%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20formation%20*Leadership%20%26%20Vision%20Strat%C3%A9gique*%20vue%20sur%20votre%20portfolio.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener" class="btn btn-premium btn-sm rounded-pill px-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-whatsapp"></i> S'inscrire
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Productivité -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="training-card">
+              <div class="training-cover p-0 overflow-hidden position-relative" style="height: 220px;">
+                <img src="../assets/img/training-productivity.png" alt="Productivité & Gestion du Temps" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(13,27,42,0.55) 100%);"></div>
+                <span class="badge-status position-absolute" style="bottom:1rem; left:1rem; top:auto; right:auto; background: linear-gradient(135deg,#00897b,#00acc1);">{{books_training_prod_badge}}</span>
+              </div>
+              <div class="training-body">
+                <h5>{{books_training_prod_title}}</h5>
+                <p class="desc">{{books_training_prod_desc}}</p>
+                <div class="topics">
+                  <span>Workflow</span>
+                  <span>Time blocking</span>
+                  <span>Systèmes</span>
+                  <span>Focus</span>
+                </div>
+                <a href="https://wa.me/2290194630235?text=Bonjour%20Nehm%20%F0%9F%91%8B%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20formation%20*Productivit%C3%A9%20%26%20Gestion%20du%20Temps*%20vue%20sur%20votre%20portfolio.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener" class="btn btn-premium btn-sm rounded-pill px-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-whatsapp"></i> S'inscrire
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Finance -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="training-card">
+              <div class="training-cover p-0 overflow-hidden position-relative" style="height: 220px;">
+                <img src="../assets/img/training-finance.png" alt="Économie & Finances Personnelles" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(13,27,42,0.55) 100%);"></div>
+                <span class="badge-status position-absolute" style="bottom:1rem; left:1rem; top:auto; right:auto; background: linear-gradient(135deg,#5c35a8,#7b1fa2);">{{books_training_fin_badge}}</span>
+              </div>
+              <div class="training-body">
+                <h5>{{books_training_fin_title}}</h5>
+                <p class="desc">{{books_training_fin_desc}}</p>
+                <div class="topics">
+                  <span>Finance</span>
+                  <span>Cash flow</span>
+                  <span>Investissement</span>
+                  <span>Budget</span>
+                </div>
+                <a href="https://wa.me/2290194630235?text=Bonjour%20Nehm%20%F0%9F%91%8B%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20formation%20*%C3%89conomie%20%26%20Finances%20Personnelles*%20vue%20sur%20votre%20portfolio.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener" class="btn btn-premium btn-sm rounded-pill px-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-whatsapp"></i> S'inscrire
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Écosystème -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="training-card">
+              <div class="training-cover p-0 overflow-hidden position-relative" style="height: 220px;">
+                <img src="../assets/img/training-ecosystem.png" alt="Design d'Écosystème d'Entreprise" style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(13,27,42,0.55) 100%);"></div>
+                <span class="badge-status position-absolute" style="bottom:1rem; left:1rem; top:auto; right:auto; background: linear-gradient(135deg,#e65100,#f57c00);">{{books_training_eco_badge}}</span>
+              </div>
+              <div class="training-body">
+                <h5>{{books_training_eco_title}}</h5>
+                <p class="desc">{{books_training_eco_desc}}</p>
+                <div class="topics">
+                  <span>Écosystème</span>
+                  <span>Structure</span>
+                  <span>Leadership</span>
+                  <span>Croissance</span>
+                </div>
+                <a href="https://wa.me/2290194630235?text=Bonjour%20Nehm%20%F0%9F%91%8B%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20formation%20*Design%20d%27%C3%89cosyst%C3%A8me%20d%27Entreprise*%20vue%20sur%20votre%20portfolio.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F" target="_blank" rel="noopener" class="btn btn-premium btn-sm rounded-pill px-4 w-100 d-flex align-items-center justify-content-center gap-2">
+                  <i class="bi bi-whatsapp"></i> S'inscrire
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-12">
+            <div class="cta-section">
+              <h2 class="mb-3">Prêt à Transformer Votre Parcours ?</h2>
+              <p>Coaching individuel, formation d'équipe ou programme sur mesure — construisons ensemble votre prochaine étape.</p>
+              <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="contact.html" class="btn btn-light btn-lg px-5 rounded-pill fw-bold">Entrons en Contact <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- include footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top btn btn-premium d-flex align-items-center justify-content-center rounded-circle shadow-lg" style="width: 45px; height: 45px;"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'image">
+    <div id="lightbox-backdrop"></div>
+    <button id="lightbox-close" aria-label="Fermer"><i class="bi bi-x-lg"></i></button>
+    <button id="lightbox-prev"  aria-label="Précédent"><i class="bi bi-chevron-left"></i></button>
+    <button id="lightbox-next"  aria-label="Suivant"><i class="bi bi-chevron-right"></i></button>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Theme JS File -->
+  <script src="../assets/js/theme.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+  /* Lightbox */
+  (function () {
+    const lb        = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lightbox-img');
+    const lbCaption = document.getElementById('lightbox-caption');
+    const lbClose   = document.getElementById('lightbox-close');
+    const lbPrev    = document.getElementById('lightbox-prev');
+    const lbNext    = document.getElementById('lightbox-next');
+    const lbBack    = document.getElementById('lightbox-backdrop');
+
+    const items = Array.from(document.querySelectorAll('[data-lightbox]'));
+    let current = 0;
+
+    function show(index) {
+      current = (index + items.length) % items.length;
+      const el  = items[current];
+      const img = el.querySelector('img');
+      lbImg.style.opacity = '0';
+      lbImg.src           = img.src;
+      lbImg.alt           = img.alt;
+      lbCaption.textContent = el.dataset.caption || img.alt || '';
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      lbImg.onload = () => { lbImg.style.opacity = '1'; };
+      lbPrev.style.display = items.length > 1 ? '' : 'none';
+      lbNext.style.display = items.length > 1 ? '' : 'none';
+    }
+
+    function close() {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => { lbImg.src = ''; }, 300);
+    }
+
+    items.forEach((el, i) => el.addEventListener('click', () => show(i)));
+    lbClose.addEventListener('click', close);
+    lbBack.addEventListener('click', close);
+    lbPrev.addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+    lbNext.addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'Escape')      close();
+      if (e.key === 'ArrowLeft')   show(current - 1);
+      if (e.key === 'ArrowRight')  show(current + 1);
+    });
+
+    let touchStartX = 0;
+    lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend',   (e) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) dx < 0 ? show(current + 1) : show(current - 1);
+    });
+  })();
+  </script>
+
+</body>
+</html>

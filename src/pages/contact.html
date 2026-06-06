@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<!-- include head -->
+
+<body class="contact-page">
+
+  <!-- include header -->
+
+  <main class="main">
+
+    <section class="contact-hero">
+      <div class="container" data-aos="fade-up">
+        <h1 class="display-4">{{contact_hero_title}}</h1>
+        <p class="mb-0">{{contact_hero_subtitle}}</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section py-5">
+      <div class="container py-4">
+        <div class="row gy-4">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="contact-info-card">
+              <h3>{{contact_info_title}}</h3>
+              <p class="mb-4" style="opacity: 0.85;">{{contact_info_desc}}</p>
+
+              <div class="contact-detail">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                  <h6>{{contact_location}}</h6>
+                  <p>Cotonou, Bénin</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                  <h6>{{contact_email_label}}</h6>
+                  <p>exaucehounga@yahoo.com</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="bi bi-whatsapp"></i>
+                <div>
+                  <h6>{{contact_whatsapp}}</h6>
+                  <p>+229 (01) 946 302 35</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="bi bi-globe2"></i>
+                <div>
+                  <h6>Portfolio Dev</h6>
+                  <p><a href="https://mydevpath.vercel.app/" target="_blank" class="text-white" style="opacity:0.85;">mydevpath.vercel.app</a></p>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3" style="border-top: 1px solid rgba(255,255,255,0.2);">
+                <p class="small fw-bold text-uppercase ls-2 mb-3">{{contact_follow}}</p>
+                <div class="social-links-contact">
+                  <a href="https://linkedin.com/in/nehm-hounga-66225b2a8" target="_blank"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://instagram.com/nehmhga" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://web.facebook.com/nehm.hounga" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="https://github.com/exaucehounga" target="_blank"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="contact-form-card">
+              <h3 class="fw-bold mb-1">{{contact_form_title}}</h3>
+              <p class="text-muted mb-4 small">{{contact_form_subtitle}}</p>
+
+              <form action="https://formspree.io/f/meokjrbq" method="POST" class="php-email-form">
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label class="small fw-bold text-dark mb-2">{{form_name}}</label>
+                    <input type="text" name="name" class="form-control" placeholder="{{form_name_ph}}" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small fw-bold text-dark mb-2">{{form_email}}</label>
+                    <input type="email" name="email" class="form-control" placeholder="{{form_email_ph}}" required>
+                  </div>
+                  <div class="col-md-12">
+                    <label class="small fw-bold text-dark mb-2">{{form_subject}}</label>
+                    <input type="text" name="subject" class="form-control" placeholder="{{form_subject_ph}}" required>
+                  </div>
+                  <div class="col-md-12">
+                    <label class="small fw-bold text-dark mb-2">{{form_message}}</label>
+                    <textarea name="message" rows="5" class="form-control" placeholder="{{form_message_ph}}" required></textarea>
+                  </div>
+                  <div class="col-md-12 pt-2">
+                    <button type="submit" class="btn btn-premium btn-lg w-100 rounded-pill fw-bold">{{form_btn}}</button>
+                    <div class="loading mt-3 small text-muted d-none">{{form_loading}}</div>
+                    <div class="error-message mt-3 small text-danger d-none">{{form_error}}</div>
+                    <div class="sent-message mt-3 small text-success d-none">{{form_success}}</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- include footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top btn btn-premium d-flex align-items-center justify-content-center rounded-circle shadow-lg" style="width: 45px; height: 45px;"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Theme JS File -->
+  <script src="../assets/js/theme.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

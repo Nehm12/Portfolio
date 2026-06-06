@@ -1,0 +1,11 @@
+{
+  "name": "nehm-venture-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio professionnel de Nehm Venture",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "author": "Nehm Venture",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<!-- include head -->
+
+<body class="index-page">
+
+  <!-- include header -->
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section min-vh-100 d-flex align-items-center position-relative overflow-hidden p-0">
+      <img src="../assets/img/hero.jpg" alt="Hero Background" class="position-absolute w-100 h-100 top-0 start-0" style="object-fit: cover; z-index: 0;">
+
+      <div class="container position-relative text-center w-100" style="z-index: 2;" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h1 class="display-3 fw-bold text-white mb-3">{{hero_title}}</h1>
+            <p class="lead text-white-50 mb-2 fs-5 fw-medium">{{hero_tagline}}</p>
+            <p class="lead text-white-50 mb-5">{{hero_desc}}</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+              <a href="contact.html" class="btn btn-premium btn-lg px-5 rounded-pill fw-bold text-white">{{hero_cta_coaching}}</a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-bold">{{hero_cta_speaking}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section bg-light py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="position-relative mb-5 mb-lg-0">
+              <img src="../assets/img/my.JPG" class="img-fluid rounded-5 shadow-lg" alt="Nehm Hounga">
+              <div class="position-absolute top-100 start-50 translate-middle w-75">
+                <div class="bg-white p-4 rounded-4 shadow-sm text-center">
+                  <h3 class="fw-bold text-primary m-0">10+</h3>
+                  <p class="text-muted small m-0 text-uppercase fw-bold">{{about_stat}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 ps-lg-5">
+            <div class="section-title text-start mb-4">
+              <h2 class="display-5 fw-bold">{{about_title}}</h2>
+              <div class="bg-primary" style="height: 4px; width: 60px;"></div>
+            </div>
+            <p class="fs-5 text-dark fw-medium mb-4">{{about_lead}}</p>
+            <p class="text-muted mb-4">{{about_body}}</p>
+            <div class="row g-4">
+              <div class="col-md-6 d-flex gap-3">
+                <div class="icon-circle bg-white shadow-sm p-3 rounded-circle text-primary"><i class="bi bi-diagram-3 fs-4"></i></div>
+                <div>
+                  <h6 class="fw-bold m-0">{{about_visionary}}</h6>
+                  <p class="small text-muted m-0">{{about_visionary_desc}}</p>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex gap-3">
+                <div class="icon-circle bg-white shadow-sm p-3 rounded-circle text-primary"><i class="bi bi-mortarboard fs-4"></i></div>
+                <div>
+                  <h6 class="fw-bold m-0">{{about_coach}}</h6>
+                  <p class="small text-muted m-0">{{about_coach_desc}}</p>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex gap-3">
+                <div class="icon-circle bg-white shadow-sm p-3 rounded-circle text-primary"><i class="bi bi-mic fs-4"></i></div>
+                <div>
+                  <h6 class="fw-bold m-0">{{about_speaker}}</h6>
+                  <p class="small text-muted m-0">{{about_speaker_desc}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section bg-light py-5 border-top">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="display-6 fw-bold">{{services_title}}</h2>
+        <p>{{services_subtitle}}</p>
+      </div>
+
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-box text-center shadow-sm w-100">
+              <div class="mb-4 text-primary fs-1"><i class="bi bi-briefcase"></i></div>
+              <h4 class="fw-bold mb-3">{{service_strategy_title}}</h4>
+              <p class="small text-muted">{{service_strategy_desc}}</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box text-center shadow-sm w-100">
+              <div class="mb-4 text-primary fs-1"><i class="bi bi-people"></i></div>
+              <h4 class="fw-bold mb-3">{{service_mentoring_title}}</h4>
+              <p class="small text-muted">{{service_mentoring_desc}}</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box text-center shadow-sm w-100">
+              <div class="mb-4 text-primary fs-1"><i class="bi bi-mic"></i></div>
+              <h4 class="fw-bold mb-3">{{service_speaking_title}}</h4>
+              <p class="small text-muted">{{service_speaking_desc}}</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box text-center shadow-sm w-100">
+              <div class="mb-4 text-primary fs-1"><i class="bi bi-graph-up-arrow"></i></div>
+              <h4 class="fw-bold mb-3">{{service_advisory_title}}</h4>
+              <p class="small text-muted">{{service_advisory_desc}}</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box text-center shadow-sm w-100">
+              <div class="mb-4 text-primary fs-1"><i class="bi bi-cpu"></i></div>
+              <h4 class="fw-bold mb-3">{{service_venture_title}}</h4>
+              <p class="small text-muted">{{service_venture_desc}}</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box text-center shadow-sm w-100">
+              <div class="mb-4 text-primary fs-1"><i class="bi bi-book"></i></div>
+              <h4 class="fw-bold mb-3">Formations en Ligne</h4>
+              <p class="small text-muted">Programmes structurés sur le leadership, la productivité, les finances et l'écosystème d'entreprise.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="contact.html" class="btn btn-premium btn-lg px-5 rounded-pill fw-bold">{{nav_contact}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact section py-5 bg-white">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="display-6 fw-bold">{{impact_title}}</h2>
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 text-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="p-4">
+              <h2 class="display-4 fw-bold text-primary">100+</h2>
+              <p class="text-muted fw-bold text-uppercase small ls-1">{{impact_mentored}}</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="p-4">
+              <h2 class="display-4 fw-bold text-primary">4+</h2>
+              <p class="text-muted fw-bold text-uppercase small ls-1">{{impact_years}}</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="p-4">
+              <h2 class="display-4 fw-bold text-primary">15+</h2>
+              <p class="text-muted fw-bold text-uppercase small ls-1">{{impact_projects}}</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="p-4">
+              <h2 class="display-4 fw-bold text-primary">4</h2>
+              <p class="text-muted fw-bold text-uppercase small ls-1">{{impact_countries}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section py-5 bg-light">
+      <div class="container section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="display-6 fw-bold">{{testimonials_title}}</h2>
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 800,
+              "autoplay": { "delay": 6000 },
+              "slidesPerView": "auto",
+              "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide cursor-grab">
+              <div class="text-center mx-auto" style="max-width: 800px;">
+                <p class="display-6 fw-light mb-5 fst-italic text-dark">{{testimonial_1}}</p>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="text-start">
+                    <h5 class="fw-bold m-0 fs-6 text-uppercase ls-1">{{testimonial_1_name}}</h5>
+                    <p class="small text-muted m-0">{{testimonial_1_role}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide cursor-grab">
+              <div class="text-center mx-auto" style="max-width: 800px;">
+                <p class="display-6 fw-light mb-5 fst-italic text-dark">{{testimonial_2}}</p>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                  <div class="text-start">
+                    <h5 class="fw-bold m-0 fs-6 text-uppercase ls-1">{{testimonial_2_name}}</h5>
+                    <p class="small text-muted m-0">{{testimonial_2_role}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-5 position-relative"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner py-5 bg-primary text-center">
+      <div class="container" data-aos="fade-up">
+        <h2 class="display-6 fw-bold text-white mb-3">Prêt à Propulser Votre Parcours ?</h2>
+        <p class="text-white-50 mb-4 fs-5">Coaching individuel, formation d'équipe, conférence ou partenariat — discutons ensemble.</p>
+        <a href="contact.html" class="btn btn-light btn-lg px-5 rounded-pill fw-bold">Entrons en Contact <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- include footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top btn btn-premium d-flex align-items-center justify-content-center rounded-circle shadow-lg" style="width: 45px; height: 45px;"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Theme JS File -->
+  <script src="../assets/js/theme.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
