@@ -195,5 +195,9 @@
     "form_btn": "Envoyer le Message",
     "form_loading": "Envoi en cours...",
     "form_error": "Une erreur est survenue.",
-    "form_success": "Message envoyé ! Je réponds sous 24h."
+    "form_success": "Message envoyé ! Je réponds sous 24h.",
+    "filter_all": "Tout",
+    "filter_fintech": "FinTech",
+    "filter_edtech": "EdTech / Communauté",
+    "filter_services": "Services"
 }

@@ -158,4 +158,38 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Portfolio dynamic category filter
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item-wrap');
+
+    if (filterButtons.length > 0 && projectItems.length > 0) {
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Toggle active class on buttons
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          projectItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (filterValue === 'all' || category === filterValue) {
+              item.classList.remove('hidden');
+              if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 300);
+              }
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+    }
+  });
+
 })();

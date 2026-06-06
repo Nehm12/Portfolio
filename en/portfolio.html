@@ -8,6 +8,18 @@
   <meta content="Our ventures - Startups and strategic ventures co-founded and scaled by Nehm Venture across Africa." name="description">
   <meta content="Entrepreneur, Coach, Auteur, Venture Builder, Executive, Nehm Hounga" name="keywords">
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ventures | Nehm Venture">
+  <meta property="og:description" content="Our ventures - Startups and strategic ventures co-founded and scaled by Nehm Venture across Africa.">
+  <meta property="og:image" content="../assets/img/hero.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Ventures | Nehm Venture">
+  <meta property="twitter:description" content="Our ventures - Startups and strategic ventures co-founded and scaled by Nehm Venture across Africa.">
+  <meta property="twitter:image" content="../assets/img/hero.jpg">
+
   <!-- Favicons -->
   <link href="../assets/img/favicon.jpeg" rel="icon">
   <link href="../assets/img/apple-touch-icon.jpeg" rel="apple-touch-icon">
@@ -69,10 +81,20 @@
         <p>Startups and strategic ventures co-founded and scaled across Africa's most promising sectors.</p>
       </div>
 
+      <!-- Category Filter Navigation -->
+      <div class="container mb-4" data-aos="fade-up" data-aos-delay="50">
+        <div class="filter-nav">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fintech">FinTech</button>
+          <button class="filter-btn" data-filter="edtech">EdTech / Community</button>
+          <button class="filter-btn" data-filter="services">Services</button>
+        </div>
+      </div>
+
       <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4" id="portfolio-grid">
           <!-- United Student Developers -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 project-item-wrap" data-category="edtech" data-aos="fade-up" data-aos-delay="100">
             <div class="card card-project h-100 shadow-sm border-light">
               <div class="p-4 bg-light text-center border-bottom border-light"
                 style="height: 200px; display: flex; align-items: center; justify-content: center;">
@@ -91,7 +113,7 @@
           </div>
 
           <!-- Wa Xle Ahi -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 project-item-wrap" data-category="services" data-aos="fade-up" data-aos-delay="200">
             <div class="card card-project h-100 shadow-sm border-light">
               <div class="p-4 bg-light text-center border-bottom border-light"
                 style="height: 200px; display: flex; align-items: center; justify-content: center;">
@@ -110,7 +132,7 @@
           </div>
 
           <!-- Fluxy -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 project-item-wrap" data-category="fintech" data-aos="fade-up" data-aos-delay="300">
             <div class="card card-project h-100 shadow-sm border-light">
               <div class="p-4 bg-light text-center border-bottom border-light"
                 style="height: 200px; display: flex; align-items: center; justify-content: center;">

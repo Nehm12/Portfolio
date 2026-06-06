@@ -4,7 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
-    const currentTheme = localStorage.getItem('site_theme') || 'light';
+    let currentTheme = localStorage.getItem('site_theme');
+    if (!currentTheme) {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        currentTheme = prefersDark ? 'dark' : 'light';
+    }
+
     if (currentTheme === 'dark') {
         body.classList.add('dark-theme');
         if (icon) {

@@ -195,5 +195,9 @@
     "form_btn": "Send Message",
     "form_loading": "Sending...",
     "form_error": "An error occurred.",
-    "form_success": "Message sent! I'll respond within 24h."
+    "form_success": "Message sent! I'll respond within 24h.",
+    "filter_all": "All",
+    "filter_fintech": "FinTech",
+    "filter_edtech": "EdTech / Community",
+    "filter_services": "Services"
 }

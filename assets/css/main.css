@@ -2536,3 +2536,139 @@ body.dark-theme .header-toggle-btn:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
+
+/* ==========================================
+   PREMIUM GLASSMORPHISM & MICRO-INTERACTIONS
+   ========================================== */
+
+/* Glassmorphism updates */
+.glass-card {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.4s ease !important;
+}
+
+body.dark-theme .glass-card {
+  background: rgba(15, 18, 30, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Micro-interactions: Cards and Hover states */
+.card, .card-project, .service-box, .project-card, .training-card {
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.35s ease !important;
+}
+
+.card:hover, .card-project:hover, .service-box:hover, .project-card:hover, .training-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 15px 35px rgba(0, 119, 182, 0.12) !important;
+  border-color: var(--accent-color) !important;
+}
+
+body.dark-theme .card:hover, body.dark-theme .card-project:hover, 
+body.dark-theme .service-box:hover, body.dark-theme .project-card:hover, 
+body.dark-theme .training-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Custom premium timeline nodes */
+.timeline-item {
+  position: relative;
+  padding-left: 3.5rem !important;
+  border-left: 2px solid rgba(0, 119, 182, 0.15) !important;
+  margin-bottom: 3rem !important;
+}
+
+body.dark-theme .timeline-item {
+  border-left: 2px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.timeline-badge-custom {
+  position: absolute;
+  left: -1.25rem;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--surface-color);
+  border: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(0, 119, 182, 0.15);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-badge-custom {
+  transform: scale(1.15);
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 119, 182, 0.4);
+}
+
+/* Category Filter navigation styles */
+.filter-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background: var(--surface-color);
+  border: 1px solid rgba(0, 119, 182, 0.15);
+  color: var(--default-color);
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  border-color: transparent;
+  color: #fff !important;
+  box-shadow: 0 5px 15px rgba(0, 119, 182, 0.25);
+}
+
+body.dark-theme .filter-btn {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .filter-btn:hover {
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Smooth filtering transition */
+.card-project {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease !important;
+}
+
+.card-project.hidden {
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+  display: none !important;
+}
